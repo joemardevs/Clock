@@ -9,7 +9,9 @@ class Clock {
     let hours = date.getHours();
     if (hours > 12) hours = "0" + (hours - 12);
     let mins = date.getMinutes();
+    if (mins < 10) mins = "0" + mins;
     let secs = date.getSeconds();
+    if (secs < 10) secs = "0" + secs;
 
     let output = this.template
       .replace("h", hours)
